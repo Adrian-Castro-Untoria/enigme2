@@ -1,14 +1,14 @@
 <html lang="fr-FR">
    <style> 
    #iFrame:hover {
-  --zoom:1.1; /* control the zoom level */
+  --zoom:0.7; /* control the zoom level */
 }
 
 
 #iFrame {
   /* the coordinate of the zoom */
-  --x:0%;
-  --y:30%;
+  --x:50%;
+  --y:90%;
   /**/
   transform: scale(var(--zoom));
   transform-origin: var(--x) var(--y);
@@ -25,7 +25,7 @@
    <container style="zoom: 2;">
 <input id="b1" onClick="b1()" style="width:40px;z-index:2;position:absolute;left:250px; padding-top:80px" type="image" src="https://play-lh.googleusercontent.com/15OKLti0ofnjK4XK1bgRXgsoblPvMi3hCA5z2o9WAcjssFNt2dXxemp2Om9vB3A_jYAe" />
 <input id="b2" onClick="b2()" style="display: none;width:40px;z-index:4;position:absolute;top:220px;" type="image" src="https://cdn1.iconfinder.com/data/icons/duotone-essentials/24/chevron_backward-512.png" />
- <div><embed id="iFrame" src="iv457_20040078_arms_queen-pdf.pdf" style="cursor: crosshair;z-index:1;height:500px;width:300px;top:30px;" />
+ <div><embed id="iFrame" src="iv457_20040078_arms_queen-pdf.pdf" style="zoom:2;cursor: crosshair;z-index:1;height:500px;width:300px;top:30px;" />
   </div> 
    
 
