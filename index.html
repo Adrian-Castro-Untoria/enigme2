@@ -1,19 +1,48 @@
-﻿<!doctype html>
 <html lang="fr-FR">
+   <style> 
+   #iFrame:hover {
+  --zoom:2; /* control the zoom level */
+}
+
+
+#iFrame {
+  /* the coordinate of the zoom */
+  --x: 50%;
+  --y: 50%;
+  /**/
+  transform: scale(var(--zoom));
+  transform-origin: var(--x) var(--y);
+  clip-path: inset(
+    calc((1 - 1/var(--zoom)) * (var(--y)))
+    calc((1 - 1/var(--zoom)) * (100% - var(--x)))
+    calc((1 - 1/var(--zoom)) * (100% - var(--y)))
+    calc((1 - 1/var(--zoom)) * (var(--x)))
+  );
   
+  
+}
+</style>
 <input id="b1" onClick="b1()" style="width:40px;z-index:2;position:absolute;left:250px; padding-top:80px" type="image" src="https://play-lh.googleusercontent.com/15OKLti0ofnjK4XK1bgRXgsoblPvMi3hCA5z2o9WAcjssFNt2dXxemp2Om9vB3A_jYAe" />
 <input id="b2" onClick="b2()" style="display: none;width:40px;z-index:4;position:absolute;top:220px;" type="image" src="https://cdn1.iconfinder.com/data/icons/duotone-essentials/24/chevron_backward-512.png" />
+<div>
+ <img  id="iFrame" style="cursor: crosshair;z-index:1;height:250px;padding-bottom:160px;padding-left:50px;padding-right:50px;" src="https://www.gg.ca/sites/default/files/elementimages/iv457_20040078_arms_queen.jpg"> </div>
 
-<div> <iframe  id="iFrame" style="z-index:1;width:300px;height:500px;" src="https://riddimryder.com/" scrolling="auto" ></iframe> </div>
-
-<div style = "z-index:3;max-height:480px;overflow-y:scroll;top:10px;position:absolute;"><img style="display:none; left:10px;  width:300px;" id="image"
+<div style = "z-index:3;max-height:500px;overflow-y:scroll;top:10px;position:absolute;"><img style="display:none; left:10px;  width:300px;" id="image"
              src=
-"iphone-1rHO.png" alt="messages"
+"https://adrian-castro-untoria.github.io/enigme2/iphone-1rHO.png" alt="messages"
             scrolling="yes" /></div>
              <img style="top:8px; left:10px; position:absolute;width:300px;height:17px; z-index:3" id="image1"
              src=
-"headerphone2.JPG" alt="messages"
+"https://adrian-castro-untoria.github.io/enigme2/headerphone2.JPG" alt="messages"
             />
              
-<script src="https://static.staticsave.com/friedman/enigme2.js"></script>
+<script src="https://static.staticsave.com/friedman/enigme2.js">
+ 
+</script>
+<script>   let img = document.querySelector("img");
+
+img.onmousemove = function(e) {
+  e.target.style.setProperty('--x',(100*e.offsetX/e.target.offsetWidth)+'%');
+  e.target.style.setProperty('--y',(100*e.offsetY/e.target.offsetHeight)+'%'); 
+}</script>
 </html>
