@@ -75,7 +75,7 @@
 "https://adrian-castro-untoria.github.io/enigme2/headerphone2.JPG" alt="messages"
             />
            </container>   
-<script src="https://static.staticsave.com/friedman/enigme2.js">
+
  
 </script>
 <script>   
@@ -86,6 +86,22 @@ document.getElementById('image')
    document.getElementById('google')
    .style.display = "block";
    google.src="https://www.google.com/webhp"
+}
+   var iframe=document.getElementById("iFrame");
+function b1() {
+    document.getElementById('image')
+                .style.display = "block";
+            
+                document.getElementById('b2')
+                .style.display = "block";
+}
+function b2() {
+document.getElementById('google')
+   .style.display = "none";
+document.getElementById('image')
+                .style.display = "none";
+ document.getElementById('b2')
+                .style.display = "none";
 }
 </script>
 </html>
