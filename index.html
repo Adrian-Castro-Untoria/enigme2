@@ -70,12 +70,54 @@
     calc((1 - 1/var(--zoom)) * (100% - var(--y)))
     calc((1 - 1/var(--zoom)) * (var(--x)))
   );
+  /* notif effect*/
+  #b2 {
+  font-size: 6.2rem;
+  animation: pulsate 1.5s infinite alternate;  
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #bc13fe,
+            0 0 0.8rem #bc13fe,
+            0 0 2.8rem #bc13fe,
+            inset 0 0 1.3rem #bc13fe; 
+}
+
+@keyframes pulsate {
+    
+  100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #bc13fe,
+      0 0 80px #bc13fe,
+      0 0 90px #bc13fe,
+      0 0 100px #bc13fe,
+      0 0 150px #bc13fe;
   
+  }
   
+  0% {
+
+    text-shadow:
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff,
+    0 0 10px #bc13fe,
+    0 0 45px #bc13fe,
+    0 0 55px #bc13fe,
+    0 0 70px #bc13fe,
+    0 0 80px #bc13fe;
+
+}
 }
 </style>
    <container style="zoom: 1.2;">
-<input id="b1" onClick="b1()" style="border:1px solid red;border-radius:100%;width:40px;z-index:2;position:absolute;left:250px; top:80px" type="image" src="https://play-lh.googleusercontent.com/15OKLti0ofnjK4XK1bgRXgsoblPvMi3hCA5z2o9WAcjssFNt2dXxemp2Om9vB3A_jYAe" />
+<input id="b1" onClick="b1()" style="border:2px solid red;border-radius:100%;width:40px;z-index:2;position:absolute;left:250px; top:80px" type="image" src="https://play-lh.googleusercontent.com/15OKLti0ofnjK4XK1bgRXgsoblPvMi3hCA5z2o9WAcjssFNt2dXxemp2Om9vB3A_jYAe" />
 
 <input id="b2" onClick="b2()" style="width:40px;z-index:4;position:absolute;top:220px;" type="image" src="https://cdn1.iconfinder.com/data/icons/duotone-essentials/24/chevron_backward-512.png" />
       <input id="b3" onClick="b3()" style="width:40px;z-index:2;position:absolute; top:450px;left:130px" type="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Google_Translate_logo.svg/1200px-Google_Translate_logo.svg.png" />
